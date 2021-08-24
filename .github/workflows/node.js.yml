@@ -31,9 +31,9 @@ jobs:
       run: npm install
 
     - name: Build
-      run: npm run build,
+      run: npm run build
       env:
-       CI: false
+       CI: ""
       
     - name: Deploy
       run: |
@@ -45,5 +45,5 @@ jobs:
         user_name: 'github-actions[bot]'
         user_email: 'github-actions[bot]@users.noreply.github.com'
         github_token: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
-        repository: ${{ github.repository }},
-        CI: false
+        repository: ${{ github.repository }}
+        CI: ""
